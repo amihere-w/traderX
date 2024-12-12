@@ -30,3 +30,10 @@
 .drpbtn3 {
   margin-left: 5px;
 }
+
+@media (min-width: 992px) {
+  .modal-lg,.modal-xl {
+      --bs-modal-width: 1400px;
+      --bs-modal-height: 1000px;
+  }
+}

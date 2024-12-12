@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TradeModule } from './trade/trade.module';
 import { provideHttpClient, withInterceptorsFromDi, withJsonpSupport } from '@angular/common/http';
@@ -10,12 +10,19 @@ import { AccountsModule } from './accounts/accounts.module';
 import { RouterModule } from '@angular/router';
 import { routes } from './routing';
 import { PageNotFoundComponent } from './page-not-found.component';
+import 'web-component-essentials'
 
-@NgModule({ declarations: [AppComponent, HeaderComponent, PageNotFoundComponent],
-    bootstrap: [AppComponent], imports: [BrowserModule,
+@NgModule({
+    declarations: [AppComponent, HeaderComponent, PageNotFoundComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    bootstrap: [AppComponent], 
+    imports: [BrowserModule,
         CommonModule,
         TradeModule,
         AccountsModule,
         AgGridModule,
-        RouterModule.forRoot(routes)], providers: [provideHttpClient(withInterceptorsFromDi(), withJsonpSupport())] })
+        RouterModule.forRoot(routes)
+    ], 
+    providers: [provideHttpClient(withInterceptorsFromDi(), withJsonpSupport())]
+})
 export class AppModule { }

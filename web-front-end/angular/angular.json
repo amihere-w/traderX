@@ -34,7 +34,9 @@
                         "inlineStyleLanguage": "scss",
                         "assets": ["main/favicon.ico", "main/assets"],
                         "styles": ["main/styles.scss"],
-                        "scripts": [],
+                        "scripts": [
+                            "node_modules/morphir-elm/cli/web/insight.js"
+                        ],
                         "browser": "main/main.ts"
                     },
                     "configurations": {

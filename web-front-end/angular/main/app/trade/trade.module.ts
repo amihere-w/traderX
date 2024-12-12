@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TradeTicketComponent } from './trade-ticket/trade-ticket.component';
 import { TradeComponent } from './trade.component';
@@ -25,6 +25,7 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
     FormsModule,
     DropdownModule
   ],
-  exports: [TradeComponent, TradeTicketComponent, TradeBlotterComponent]
+  exports: [TradeComponent, TradeTicketComponent, TradeBlotterComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class TradeModule {}

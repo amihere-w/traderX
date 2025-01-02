@@ -1,6 +1,6 @@
 <div class="p-4">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-5">
             <div class="mb-3 row">
                 <label class="col-sm-2 col-form-label me-3">Account</label>
                 <div class="col-sm-8">
@@ -67,7 +67,7 @@
                 <button class="btn btn-sm btn-secondary col-sm-3" id="cancelButton" (click)="onCancel()">Close</button>
             </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-7">
             <morphir-insight #morphirInsight [arguments]='[tradeOrder]' fqn="Morphir.Rulesengine.TradingRules:newTrade"></morphir-insight>
         </div>
     </div>
